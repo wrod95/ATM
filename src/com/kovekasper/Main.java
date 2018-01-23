@@ -1,6 +1,5 @@
 package com.kovekasper;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +21,21 @@ public class Main {
 
         atm.setUser(new Person(name, 75.00));
 
-        System.out.printf("Hello, %s!", name);
+        System.out.printf("Hello, %s!%n", name);
 
+        //TODO: Check Account Balance -- Withdraw -- Exit Terminal
+
+        System.out.printf("Choose an action:%n");
+        System.out.printf("1 - Check Balance%n");
+        System.out.printf("2 - Withdraw%n");
+
+        int selection = Integer.valueOf(scanner.nextLine());
+
+        if (selection == 1) {
+            atm.checkBalance();
+        } else if (selection == 2) {
+            System.out.printf("Withdraw amount:%n");
+            atm.withdraw(Double.valueOf(scanner.nextInt()));
+        }
     }
 }

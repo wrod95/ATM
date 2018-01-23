@@ -22,7 +22,8 @@ public class Person {
         return accountBlance;
     }
 
-    public void setAccountBlance(double accountBlance) {
-        this.accountBlance = accountBlance;
+    public double setAccountBlance(double accountBlance) {
+        return this.accountBlance = accountBlance;
     }
+
 }
