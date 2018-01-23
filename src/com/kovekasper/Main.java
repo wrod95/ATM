@@ -23,19 +23,18 @@ public class Main {
 
         System.out.printf("Hello, %s!%n", name);
 
-        //TODO: Check Account Balance -- Withdraw -- Exit Terminal
-
-        System.out.printf("Choose an action:%n");
-        System.out.printf("1 - Check Balance%n");
-        System.out.printf("2 - Withdraw%n");
-
-        int selection = Integer.valueOf(scanner.nextLine());
-
-        if (selection == 1) {
-            atm.checkBalance();
-        } else if (selection == 2) {
-            System.out.printf("Withdraw amount:%n");
-            atm.withdraw(Double.valueOf(scanner.nextInt()));
+        switch (atm.makeSelection()){
+            case 1:
+                atm.checkBalance();
+                break;
+            case 2:
+                System.out.printf("Withdraw amount:%n");
+                atm.withdraw(scanner.nextInt());
+                break;
+            case 3:
+                atm.endSession();
+                break;
         }
+
     }
 }
