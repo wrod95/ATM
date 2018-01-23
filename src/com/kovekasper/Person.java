@@ -3,11 +3,11 @@ package com.kovekasper;
 public class Person {
 
     private String name;
-    private double accountBlance;
+    private double accountBalance;
 
-    public Person(String name, double accountBlance) {
+    public Person(String name, double accountBalance) {
         this.name = name;
-        this.accountBlance = accountBlance;
+        this.accountBalance = accountBalance;
     }
 
     public String getName() {
@@ -18,12 +18,12 @@ public class Person {
         this.name = name;
     }
 
-    public double getAccountBlance() {
-        return accountBlance;
+    public double getAccountBalance() {
+        return accountBalance;
     }
 
     public double setAccountBlance(double accountBlance) {
-        return this.accountBlance = accountBlance;
+        return this.accountBalance = accountBlance;
     }
 
 }
